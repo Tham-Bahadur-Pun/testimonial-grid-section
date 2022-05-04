@@ -18,4 +18,127 @@ body {
   margin: 0;
   font-size: 13px;
   font-family: "Barlow Semi Condensed", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--Light_grayish_blue);
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+span {
+  display: inline-block;
+}
+main > div {
+  padding: 2rem;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+main > div:not(.testimonial-1) {
+  margin-top: 1rem;
+}
+.testimonial-1 {
+  background-color: var(--Moderate_violet);
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.testimonial-2 {
+  background-color: var(--Very_dark_grayish_blue);
+}
+.testimonial-3 {
+  background-color: var(--White);
+}
+.testimonial-4 {
+  background-color: var(--Very_dark_blackish_blue);
+  color: white;
+}
+.testimonial-5 {
+  background-color: var(--White);
+}
+
+img {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 30px;
+}
+
+main > div > div:first-child {
+  display: flex;
+  align-items: center;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+.testimonial-1 img,
+.testimonial-4 img {
+  border: 2px solid #a775f1;
+}
+.testimonial-1 .name,
+.testimonial-2 .name,
+.testimonial-4 .name {
+  color: var(--White);
+}
+.post {
+  color: var(--Light_gray);
+}
+.testimonial .title {
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.testimonial-3 .testimonial .title,
+.testimonial-5 .testimonial .title {
+  color: var(--Very_dark_grayish_blue);
+}
+.title + p {
+  color: var(--Very_dark_grayish_blue);
+}
+.testimonial-2 .title + p {
+  color: var(--White);
+}
+
+@media (min-width: 720px) {
+  /* body {
+    background: green;
+  } */
+  main {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "test-1 test-1 test-2 test-5" "test-3 test-4 test-4 test-5";
+    gap: 10px;
+  }
+  .testimonial-1 {
+    grid-area: test-1;
+  }
+  .testimonial-2 {
+    grid-area: test-2;
+  }
+  .testimonial-3 {
+    grid-area: test-3;
+  }
+  .testimonial-4 {
+    grid-area: test-4;
+  }
+  .testimonial-5 {
+    grid-area: test-5;
+  }
+  main > div:not(.testimonial-1) {
+    margin-top: initial;
+  }
 }
